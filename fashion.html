@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexra - Fashion</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="fashion.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">
+                <a href="index.html"><img src="logo.png" alt=""></a>
+            </div>
+
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#cart">Cart</a>
+            <div class="categories-dropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown()">
+                    Categories
+                    <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="#" class="dropdown-item" onclick="selectCategory('men', event)">
+                        <span class="category-icon">👔</span>
+                        <span class="category-name">Men's Fashion</span>
+                    </a>
+                    <a href="#" class="dropdown-item" onclick="selectCategory('women', event)">
+                        <span class="category-icon">👗</span>
+                        <span class="category-name">Women's Fashion</span>
+                    </a>
+                    <a href="#" class="dropdown-item" onclick="selectCategory('kids', event)">
+                        <span class="category-icon">👶</span>
+                        <span class="category-name">Kids Fashion</span>
+                    </a>
+                    <a href="#" class="dropdown-item" onclick="selectCategory('accessories', event)">
+                        <span class="category-icon">👜</span>
+                        <span class="category-name">Accessories</span>
+                    </a>
+                    <a href="#" class="dropdown-item" onclick="selectCategory('shoes', event)">
+                        <span class="category-icon">👞</span>
+                        <span class="category-name">Shoes</span>
+                    </a>
+                    <a href="#" class="dropdown-item sale" onclick="selectCategory('sale', event)">
+                        <span class="category-icon">🎉</span>
+                        <span class="category-name">Sale</span>
+                    </a>
+                </div>
+            </div>
+            <a href="#contact">Contact</a>
+            <a href="#login">Login</a>
+            <a href="#get-started" class="get-started">Get started</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Fashion</h1>
+
+        <div class="slideshow-container">
+            <div class="slide active">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200&h=500&fit=crop"
+                    alt="Cozy Fashion">
+                <div class="slide-content">
+                    <h2>Your Cozy Era</h2>
+                    <p>Get peak comfy-chic<br>with new winter essentials.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&h=500&fit=crop"
+                    alt="Street Style">
+                <div class="slide-content">
+                    <h2>Street Style</h2>
+                    <p>Discover the latest trends<br>in urban fashion.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=1200&h=500&fit=crop"
+                    alt="Elegant Collection">
+                <div class="slide-content">
+                    <h2>Elegant Collection</h2>
+                    <p>Timeless pieces for<br>sophisticated style.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?w=1200&h=500&fit=crop"
+                    alt="Summer Vibes">
+                <div class="slide-content">
+                    <h2>Summer Vibes</h2>
+                    <p>Light and breezy styles<br>for warm days ahead.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=1200&h=500&fit=crop"
+                    alt="Classic Favorites">
+                <div class="slide-content">
+                    <h2>Classic Favorites</h2>
+                    <p>Essential pieces that<br>never go out of style.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dots-container">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+
+        <h1>Collections</h1>
+
+        <div class="collections-grid">
+
+            <div class="collection-box">
+                <div class="collection-header">
+                    <h2 class="collection-title">Clothing</h2>
+                    <a href="#clothing" class="view-all-btn">→</a>
+                </div>
+                <div class="collection-items">
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=300&h=300&fit=crop"
+                            alt="Men's Suit">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=300&h=300&fit=crop"
+                            alt="Beige Suit">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=300&h=300&fit=crop"
+                            alt="Women's Dress">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=300&h=300&fit=crop"
+                            alt="White Coat">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?w=300&h=300&fit=crop"
+                            alt="Women's Fashion">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=300&h=300&fit=crop"
+                            alt="Gray Coat">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=300&h=300&fit=crop"
+                            alt="Black Boots">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=300&h=300&fit=crop"
+                            alt="Navy Shoes">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="collection-box">
+                <div class="collection-header">
+                    <h2 class="collection-title">Shoes</h2>
+                    <a href="#shoes" class="view-all-btn">→</a>
+                </div>
+                <div class="collection-items">
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=300&fit=crop"
+                            alt="Brown Sneakers">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=300&h=300&fit=crop"
+                            alt="White Sneakers">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=300&h=300&fit=crop"
+                            alt="Black Heels">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=300&h=300&fit=crop"
+                            alt="Navy Loafers">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?w=300&h=300&fit=crop"
+                            alt="Running Shoes">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=300&h=300&fit=crop"
+                            alt="Boots">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=300&h=300&fit=crop"
+                            alt="Casual Shoes">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=300&h=300&fit=crop"
+                            alt="Sneakers">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="collection-box">
+                <div class="collection-header">
+                    <h2 class="collection-title">Bags</h2>
+                    <a href="#bags" class="view-all-btn">→</a>
+                </div>
+                <div class="collection-items">
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=300&h=300&fit=crop"
+                            alt="Beige Bag">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=300&h=300&fit=crop"
+                            alt="Gray Backpack">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=300&h=300&fit=crop"
+                            alt="Leather Bag">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1564222195116-8a74a96b2c8c?w=300&h=300&fit=crop"
+                            alt="White Bags">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=300&h=300&fit=crop"
+                            alt="Handbag">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=300&h=300&fit=crop"
+                            alt="Tote Bag">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?w=300&h=300&fit=crop"
+                            alt="Crossbody">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?w=300&h=300&fit=crop"
+                            alt="Satchel">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="collection-box">
+                <div class="collection-header">
+                    <h2 class="collection-title">Hoodies</h2>
+                    <a href="#hoodies" class="view-all-btn">→</a>
+                </div>
+                <div class="collection-items">
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=300&h=300&fit=crop"
+                            alt="Yellow Hoodie">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=300&h=300&fit=crop"
+                            alt="Blue Gradient Hoodie">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=300&h=300&fit=crop"
+                            alt="Black Hoodie">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1620799139834-6b8f844fbe61?w=300&h=300&fit=crop"
+                            alt="White Hoodie">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=300&h=300&fit=crop"
+                            alt="Hoodie Style">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=300&h=300&fit=crop"
+                            alt="Casual Hoodie">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1578932750355-5eb30ece487a?w=300&h=300&fit=crop"
+                            alt="Oversized Hoodie">
+                    </div>
+                    <div class="collection-item">
+                        <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=300&h=300&fit=crop"
+                            alt="Zip Hoodie">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Most Popular Section -->
+        <div class="most-popular-section">
+            <h2 class="section-title">Most Popular</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=500&fit=crop"
+                        alt="Beige Fashion" class="product-image">
+                    <div class="product-info">
+                        <div class="product-meta">
+                            <div class="product-price">
+                                11780
+                                <button class="favorite-btn">🧡</button>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="product-badge badge-new">New</span>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=400&h=500&fit=crop"
+                        alt="Woman with Hat" class="product-image">
+                    <div class="product-info">
+                        <div class="product-meta">
+                            <div class="product-price">
+                                7806
+                                <button class="favorite-btn">🧡</button>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="product-badge badge-sale">Sale</span>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?w=400&h=500&fit=crop"
+                        alt="Striped Shirt" class="product-image">
+                    <div class="product-info">
+                        <div class="product-meta">
+                            <div class="product-price">
+                                1956
+                                <button class="favorite-btn">🧡</button>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="product-badge badge-hot">Hot</span>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop"
+                        alt="Man in Coat" class="product-image">
+                    <div class="product-info">
+                        <div class="product-meta">
+                            <div class="product-price">
+                                7220
+                                <button class="favorite-btn">🧡</button>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="product-badge badge-hot">Hot</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial Section -->
+        <div class="testimonial-section">
+            <button class="slider-btn" onclick="previousTestimonial()">‹</button>
+
+            <div>
+                <h2 class="testimonial-header">People Are Talking</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial-content">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Love this shirt! Fits perfectly and the fabric is thick without
+                            being stiff."</p>
+                        <p class="testimonial-author">- Juniper, <a href="#">the Heavyweight Overshirt</a></p>
+                    </div>
+                    <div class="testimonial-image">
+                        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&h=600&fit=crop"
+                            alt="Customer wearing product">
+                    </div>
+                </div>
+            </div>
+
+            <button class="slider-btn" onclick="nextTestimonial()">›</button>
+        </div>
+
+        <!-- Just For You Section -->
+        <div class="just-for-you-section">
+            <div class="section-header">
+                <h2 class="section-title">Just For You</h2>
+                <span class="star-icon">★</span>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=800&h=600&fit=crop"
+                            alt="White tops">
+                    </div>
+                    <div class="product-details">
+                        <p class="product-description">White tops always bring a good mood.</p>
+                        <p class="product-price">15,000 RWF</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&h=600&fit=crop"
+                            alt="Beautiful heels">
+                    </div>
+                    <div class="product-details">
+                        <p class="product-description">Get yourself party-ready with beautiful heels!</p>
+                        <p class="product-price">28,000 RWF</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&h=600&fit=crop"
+                            alt="Simple bag">
+                    </div>
+                    <div class="product-details">
+                        <p class="product-description">A simple bag for a simple outing!</p>
+                        <p class="product-price">15,000 RWF</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&h=600&fit=crop"
+                            alt="Pink hoodie">
+                    </div>
+                    <div class="product-details">
+                        <p class="product-description">Who said pink hoodies can't look good?</p>
+                        <p class="product-price">13,000 RWF</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=800&h=600&fit=crop"
+                            alt="Fashion freedom">
+                    </div>
+                    <div class="product-details">
+                        <p class="product-description">Good fashion also means freedom.</p>
+                        <p class="product-price">22,000 RWF</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&h=600&fit=crop"
+                            alt="Warm hoodie">
+                    </div>
+                    <div class="product-details">
+                        <p class="product-description">Stay warm. Look cool.</p>
+                        <p class="product-price">20,000 RWF</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-content">
+
+                    <div class="footer-section footer-logo">
+                        <div class="footer-brand">
+                            <img src="logo.png" alt="">
+                        </div>
+                    </div>
+
+
+                    <div class="footer-section">
+                        <h4 class="footer-title">About Us</h4>
+                        <ul class="footer-links">
+                            <li><a href="#" class="footer-link">News</a></li>
+                            <li><a href="#" class="footer-link">Official Store</a></li>
+                            <li><a href="#" class="footer-link">Company</a></li>
+                            <li><a href="#" class="footer-link">Careers</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="footer-section">
+                        <h4 class="footer-title">Get Help</h4>
+                        <ul class="footer-links">
+                            <li><a href="#" class="footer-link">FAQ</a></li>
+                            <li><a href="#" class="footer-link">Returns</a></li>
+                            <li><a href="#" class="footer-link">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="footer-section footer-social">
+                        <h4 class="footer-title">Follow Us</h4>
+                        <div class="social-links">
+                            <a class="social-link facebook" href="#"><i class='bx bxl-facebook'></i></a>
+                            <a class="social-link instagram" href="#"><i class='bx bxl-instagram'></i></a>
+                            <a class="social-link twitter" href="#"><i class='bx bxl-twitter'></i></a>
+                            <a class="social-link youtube" href="#"><i class='bx bxl-youtube'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="footer-bottom">
+                    <div class="footer-links-bottom">
+                        <a href="#" class="footer-link-bottom">Terms & Conditions</a>
+                        <a href="#" class="footer-link-bottom">Privacy Policy</a>
+                    </div>
+                    <p class="footer-copyright">© 2026 Nexra. All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="fashion.js">
+
+        </script>
