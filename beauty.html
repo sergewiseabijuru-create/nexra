@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Nexra - Beauty Products</title>
+    <link rel="stylesheet" href="beauty.css">
+    
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="images/logo.png" alt="">
+            </div>
+
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#cart">Cart</a>
+            <div class="categories-dropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown()">
+                    Categories
+                    <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="#" class="dropdown-item" onclick="selectCategory('men', event)">
+                        <span class="category-icon">👔</span>
+                        <span class="category-name">Men's Fashion</span>
+                    </a>
+                    <a href="#" class="dropdown-item" onclick="selectCategory('women', event)">
+                        <span class="category-icon">👗</span>
+                        <span class="category-name">Women's Fashion</span>
+                    </a>
+                    <a href="#" class="dropdown-item" onclick="selectCategory('kids', event)">
+                        <span class="category-icon">👶</span>
+                        <span class="category-name">Kids Fashion</span>
+                    </a>
+                    <a href="#" class="dropdown-item" onclick="selectCategory('accessories', event)">
+                        <span class="category-icon">👜</span>
+                        <span class="category-name">Accessories</span>
+                    </a>
+                    <a href="#" class="dropdown-item" onclick="selectCategory('shoes', event)">
+                        <span class="category-icon">👞</span>
+                        <span class="category-name">Shoes</span>
+                    </a>
+                    <a href="#" class="dropdown-item sale" onclick="selectCategory('sale', event)">
+                        <span class="category-icon">🎉</span>
+                        <span class="category-name">Sale</span>
+                    </a>
+                </div>
+            </div>
+            <a href="#contact">Contact</a>
+            <a href="login.html">Login</a>
+            <a href="signUp.html" class="get-started">Get started</a>
+        </nav>
+    </header>
+
+
+    <div class="slider-container">
+        <div class="slider" id="slider">
+            <div class="slide">
+                <img src="images/Rectangle 5.png"
+                    alt="Luxury Skincare">
+            </div>
+            <div class="slide">
+                <img src="images/pexels-victorcandiani-9620359.jpg"
+                    alt="Natural Beauty" height="30px">
+            </div>
+            <div class="slide">
+                <img src="images/pexels-ron-lach-8154664.jpg"
+                    alt="Premium Cosmetics">
+            </div>
+            <div class="slide">
+                <img src="images/Rectangle 37.png"
+                    alt="Beauty & Wellness">
+            </div>
+        </div>
+        <button class="slider-nav prev" onclick="moveSlide(-1)">‹</button>
+        <button class="slider-nav next" onclick="moveSlide(1)">›</button>
+    </div>
+
+    <div class="dots">
+        <div class="dot active" onclick="goToSlide(0)"></div>
+        <div class="dot" onclick="goToSlide(1)"></div>
+        <div class="dot" onclick="goToSlide(2)"></div>
+        <div class="dot" onclick="goToSlide(3)"></div>
+    </div>
+
+    <section class="categories-section">
+        <h2>Categories</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <img src="images/pexels-828860-2587370.jpg" alt="Creams"
+                    class="category-image">
+                <span class="category-label">Creams</span>
+            </div>
+            <div class="category-card">
+                <img src="images/Ellipse 2.png" alt="Moisturizers"
+                    class="category-image">
+                <span class="category-label">Moisturizers</span>
+            </div>
+            <div class="category-card">
+                <img src="images/Ellipse 4.png" alt="Serums"
+                    class="category-image">
+                <span class="category-label">Serums</span>
+            </div>
+            <div class="category-card">
+                <img src="images/Ellipse 6 (1).png" alt="Tools"
+                    class="category-image">
+                <span class="category-label">Tools</span>
+            </div>
+            <div class="category-card">
+                <img src="images/Ellipse 6.png" alt="Fragrances"
+                    class="category-image">
+                <span class="category-label">Fragrances</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="trending-section">
+        <h2>Highly trending products</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="images/top.png" alt="Laxi collection"
+                    class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Laxi collection</h3>
+                    <p class="product-description">Collection of skin products</p>
+                    <div class="product-footer">
+                        <span class="product-price">30 000 RWF</span>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Component 1.png"
+                    alt="Biodance Products" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Biodance Products</h3>
+                    <p class="product-description">Facial masks</p>
+                    <div class="product-footer">
+                        <span class="product-price">10 000 RWF</span>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Rectangle 35.png" alt="Alya skin care"
+                    class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Alya skin care products</h3>
+                    <p class="product-description">Best of the brands</p>
+                    <div class="product-footer">
+                        <span class="product-price">20 000 RWF</span>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Rectangle 21.png" alt="Kylie Skin"
+                    class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Kylie Skin</h3>
+                    <p class="product-description">Sunscreen</p>
+                    <div class="product-footer">
+                        <span class="product-price">30 000 RWF</span>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Rectangle 22.png" alt="Collagen pad"
+                    class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Collagen pad</h3>
+                    <p class="product-description">Day and Night</p>
+                    <div class="product-footer">
+                        <span class="product-price">50 000 RWF</span>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Rectangle 24.png" alt="Breylee Rose"
+                    class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Breylee Rose</h3>
+                    <p class="product-description">Eye Mask</p>
+                    <div class="product-footer">
+                        <span class="product-price">100 000 RWF</span>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="banner">
+        <div class="product-left">
+            <img src="images/cerum.png" alt="Lip Gloss"
+                class="lip-gloss-img">
+        </div>
+        <div class="content">
+            <h1>Get 50% Off</h1>
+            <p>for all new product purchases</p>
+            <p class="min-purchase">min. purchase RWF 30,000</p>
+            <a href="#" class="shop-btn">SHOP NOW</a>
+        </div>
+        <div class="product-right">
+            <img src="images/Rectangle 8.png" alt="Serum"
+                class="serum-img">
+        </div>
+    </div>
+
+    <section class="collections-section">
+        <h2>Explore the best collections</h2>
+        <div class="collections-grid">
+            <div class="collection-card">
+                <img src="images/Rectangle 31.png" alt="Cherry Blossom"
+                    class="collection-image">
+                <div class="collection-info">
+                    <h3 class="collection-title">Cherry Blossom</h3>
+                    <p class="collection-subtitle">The light of autumn</p>
+                    <div class="product-footer">
+                        <span class="product-price">30 000 RWF</span>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-card">
+                <img src="images/Rectangle 35.png" alt="Moistures"
+                    class="collection-image">
+                <div class="collection-info">
+                    <h3 class="collection-title">Moistures</h3>
+                    <p class="collection-subtitle">Luxury</p>
+                    <div class="product-footer">
+                        <span class="product-price">50 000 RWF</span>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-card">
+                <img src="images/Rectangle 30 (1).png"
+                    alt="Jarsking Collection" class="collection-image">
+                <div class="collection-info">
+                    <h3 class="collection-title">Jarsking Collection</h3>
+                    <p class="collection-subtitle">Serums & Moisturizers</p>
+                    <div class="product-footer">
+                        <span class="product-price">100 000 RWF</span>
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <div class="newsletter-content">
+            <div class="newsletter-text">
+                <h2>Stay home & get your daily needs from our shop</h2>
+                <p>Start Your Daily Shopping with Nexra</p>
+                <div class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Your email address">
+                    <button class="subscribe-btn">Subscribe</button>
+                </div>
+            </div>
+            <div class="newsletter-image">
+                <img src="images/Rectangle 37.png" alt="Beauty Model">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+
+                <div class="footer-section footer-logo">
+                    <div class="footer-brand">
+                        <img src="images/logo.png" alt="Nexra Logo">
+                    </div>
+                </div>
+
+
+                <div class="footer-section">
+                    <h4 class="footer-title">About Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">News</a></li>
+                        <li><a href="#" class="footer-link">Official Store</a></li>
+                        <li><a href="#" class="footer-link">Company</a></li>
+                        <li><a href="#" class="footer-link">Careers</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Get Help</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">FAQ</a></li>
+                        <li><a href="#" class="footer-link">Returns</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-section footer-social">
+                    <h4 class="footer-title">Follow Us</h4>
+                    <div class="social-links">
+                        <a class="social-link facebook" href="#"><i class='bx bxl-facebook'></i></a>
+                        <a class="social-link instagram" href="#"><i class='bx bxl-instagram'></i></a>
+                        <a class="social-link twitter" href="#"><i class='bx bxl-twitter'></i></a>
+                        <a class="social-link youtube" href="#"><i class='bx bxl-youtube'></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="footer-bottom">
+                <div class="footer-links-bottom">
+                    <a href="#" class="footer-link-bottom">Terms & Conditions</a>
+                    <a href="#" class="footer-link-bottom">Privacy Policy</a>
+                </div>
+                <p class="footer-copyright">© 2026 Nexra. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="beauty.js"></script>
+       
+        
+</body>
+
+</html>
