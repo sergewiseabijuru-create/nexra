@@ -140,6 +140,7 @@ body {
 .product-image {
   height: 400px;
   object-fit: cover;
+  border-radius: 15px;
 }
 
 .product-price {
