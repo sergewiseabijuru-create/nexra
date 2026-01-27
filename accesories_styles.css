@@ -27,16 +27,13 @@
         }
 
         .navbar-brand {
-            font-weight: 800;
-            font-size: 1.8rem;
-            color: #000;
-            display: flex;
-            align-items: center;
+          font-size: 1.5rem;
+          font-weight: bold;
         }
 
         .navbar-brand img {
-            height: 50px;
-            width: 50px;
+            height: 100px;
+            width: 150px;
             margin-right: 12px;
             object-fit: contain;
         }
